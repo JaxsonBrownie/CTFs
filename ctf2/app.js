@@ -137,7 +137,7 @@ app.get('/challenge5', (req, res) => {
 // starting point for the challenges
 app.get('/', (req, res) => {
   res.send(`
-    <h1>Welcome to the 25.A Backend CTF!</h1>
+    <h1>Welcome to the Backend CTF!</h1>
     <b>Good Luck!</b>
     <ul>
       <li><a href="/challenge1">Challenge 1</a></li>
