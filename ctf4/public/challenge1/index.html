@@ -1,0 +1,38 @@
+<h1>Challenge 1 - Suspicious Email</h1>
+
+<p>This looks like a real email. Inspect headers.</p>
+<pre>Hint: inspect the source code of this email</pre>
+
+<div class="email">
+    <p><b>From:</b> support@mybannk.com</p>
+    <p><b>Subject:</b> Urgent</p>
+
+    <p>Dear Customer, we detected unusual activity on your account. Please verify your login details immediately by clicking the link below to avoid suspension: [REDACTED]</p>
+</div>
+
+<button onclick="document.getElementById('hdr').style.display='block'">
+    View Raw Headers
+</button>
+
+<pre id="hdr" style="display:none;">
+Return-Path: no-reply@secure-bannk.com
+Received: from unknown (HELO mail.evilserver.ru) (185.231.221.14)
+    by mx1.targetcompany.com with SMTP;
+    Wed, 08 Dec 2025 14:22:54 +0000
+From: "CommonWealth Bank" no-reply@commonwealth.com>
+Reply-To: support@secure-bannk.com
+
+Subject: Urgent: Action Required on Your Account - FLAG{HEADER_FORGERY_101}
+Message-ID: 20251208142254.A1B2C3D4@mail.evilserver.ru
+To: victim@targetcompany.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Authentication-Results: mx1.targetcompany.com;
+    spf=fail (domain forged) smtp.mailfrom=secure-bannk.com;
+    dkim=none (no signature);
+    dmarc=fail (p=reject)
+X-Origin-IP: 185.231.221.14
+
+</pre>
+
+<a href="/">Back</a>

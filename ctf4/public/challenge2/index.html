@@ -1,0 +1,16 @@
+<h1>Challenge 2 - Fake Login Page</h1>
+
+<link rel="stylesheet" href="/style.css">
+
+<div class="login-box">
+    <h2>Bank Secure Login</h2>
+    <pre>Hint: Fake login pages usually have malicious JavaScript running in them. You can view this JavaScript code by viewing the page source and clicking on .js files.</pre>
+
+    <form action="/stolen-creds/upload" method="POST">
+        <input name="user" placeholder="Username"><br>
+        <input name="pass" type="password" placeholder="Password"><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script src="harvest.js"></script>
