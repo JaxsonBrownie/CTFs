@@ -1,14 +1,18 @@
 const express = require("express");
 const path = require("path");
+const { getLocalIP } = require("../util/common");
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+const PORT = 4444;
+
 app.get("/", (req, res) => {
     res.send(`
         <h1>PhishNet CTF</h1>
         <p>Welcome to the phishing-themed CTF!</p>
+        <b>Your goal is to find 5 "flags" (which are just pieces of text). They will look like: FLAG{example-flag}, but with different text inside."
 
         <ul>
             <li><a href="/km">Knowledge Management Portal (IOCs)</a></li>
@@ -73,4 +77,7 @@ app.get("/challenge5", (req, res) => {
     `);
 });
 
-app.listen(3000, () => console.log("CTF running on http://localhost:3000"));
+app.listen(PORT, () => {
+    console.log(`CTF running on http://localhost:${PORT}`)
+    console.log('Tell students to connect to:', `http://${getLocalIP()}:${PORT}`);
+});
