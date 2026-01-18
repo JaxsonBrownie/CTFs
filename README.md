@@ -4,8 +4,9 @@
 ## To Start
 Open a terminal in this directory and run the following commands. Be sure to have node installed: [Click here to install node.](https://nodejs.org/en/download)
 
-`npm install` - this will install all the required packages
-`node ctf1/app.js` - this will start the CTF1 server
+- `npm install` - this will install all the required packages
+
+- `node ctf1/app.js` - this will start the CTF1 server
 
 Change the directory in this command to whichever CTF challenge you want. E.g: `node ctf2/app.j2` for the CTF2 server.
 
