@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const { getLocalIP } = require("../util/common");
 
 const app = express();
 const PORT = 1111;
@@ -21,6 +22,8 @@ app.get("/", (req, res) => {
       <input name="password" placeholder="password" type="password" />
       <button type="submit">Login</button>
     </form>
+
+    <p>Your goal is to find the flag in this website. It will look something like: CTF{this-is-an-example-flag}.
 
     <!--
         test account rem in prod:
@@ -90,4 +93,5 @@ app.use((err, req, res, next) => {
 // --- Start Server ---
 app.listen(PORT, () => {
   console.log(`CTF1 running on http://localhost:${PORT}`);
+  console.log('Tell students to connect to:', `http://${getLocalIP()}:${PORT}`);
 });

@@ -1,8 +1,14 @@
 // import everything
 const express = require('express');
 const cors = require("cors");
+const { getLocalIP } = require("../util/common");
+const dotenv = require('dotenv')
+
+dotenv.config({
+  path: './ctf2/.env'
+});
+
 const app = express();
-const dotenv = require('dotenv');
 const PORT = 2222;
 
 // load flags from an environment file (you can't see them here!)
@@ -138,7 +144,7 @@ app.get('/challenge5', (req, res) => {
 app.get('/', (req, res) => {
   res.send(`
     <h1>Welcome to the Backend CTF!</h1>
-    <b>Good Luck!</b>
+    <b>There are 5 flags to find. Good Luck!</b>
     <ul>
       <li><a href="/challenge1">Challenge 1</a></li>
       <li><a href="/challenge2">Challenge 2</a></li>
@@ -151,4 +157,5 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`CTF2 running on http://localhost:${PORT}`);
+    console.log('Tell students to connect to:', `http://${getLocalIP()}:${PORT}`);
 });
