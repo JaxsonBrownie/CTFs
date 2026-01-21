@@ -1,6 +1,7 @@
 {
-  "name": "weakpasswordwebsitehard",
+  "name": "ctf5",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -8,12 +9,10 @@
   },
   "author": "",
   "license": "ISC",
-  "keywords": [],
   "dependencies": {
     "bcrypt": "^6.0.0",
     "express": "^5.2.1",
     "express-rate-limit": "^8.2.1",
     "express-session": "^1.18.2"
-  },
-  "description": ""
+  }
 }
