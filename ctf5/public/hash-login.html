@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Secure Admin Login</h2>
+
+    <form method="POST" action="/hash-login">
+      <input name="password" placeholder="Password" />
+      <button>Login</button>
+    </form>
+
+    <div class="lab-note">
+      bcrypt • rate limited • slow hash
+    </div>
+  </div>
+</body>
+</html>
