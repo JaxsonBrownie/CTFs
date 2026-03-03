@@ -17,16 +17,15 @@ app.use(
 
 /*
 hydra for brute forcing login page
-
-
 john --format=bcrypt hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
+echo "base64" | base64
 */
 
 // ------------------------------
 // STATIC CREDENTIAL (INTENTIONALLY WEAK)
 // ------------------------------
-const WEAK_USERNAME = "admin";
-const WEAK_PASSWORD = "bella2008"; // brute-forceable
+const WEAK_USERNAME = "security@work.com";
+const WEAK_PASSWORD = "newyork1"; // brute-forceable
 
 // ------------------------------// ------------------------------
 // BASE64 "ENCODED" PASSWORD (NOT SECURITY)
@@ -38,7 +37,7 @@ const BASE64_ENCODED = Buffer
 
 // STRONG HASHED PASSWORD
 // ------------------------------
-const STRONG_PASSWORD = "10301985";
+const STRONG_PASSWORD = "terry";
 const HASHED_PASSWORD = bcrypt.hashSync(STRONG_PASSWORD, 12);
 
 // ------------------------------
