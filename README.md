@@ -17,3 +17,4 @@ Change the directory in this command to whichever CTF challenge you want. E.g: `
 - **CTF2** - More advanced challenge involving cookie manipulation and decoding base 64.
 - **CTF3** - An easier challenge involving looking at website source code.
 - **CTF4** - Challenges based around a Knowledge Management Strategy (KMS). Involves some pretty tricky challenges.
+- **CTF5** - Weak password challenge
